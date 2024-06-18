@@ -1,0 +1,18 @@
+.button {
+  min-width: 130px;
+  height: 40px;
+  color: var(--kg-color-roseI);
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  border-radius: var(--kg-radius-lg);
+  border: 2px solid var(--kg-color-roseIII);
+  background:var(--kg-color-roseIII);
+}
+.button:hover {
+  background:var(--kg-color-roseI);
+  color: var(--kg-color-roseIII);
+}
