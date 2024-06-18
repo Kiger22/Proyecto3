@@ -114,7 +114,12 @@ body {
 }
 
 #app {
-  max-width: 1280px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 11450px;
+  min-width: 500px;
   scroll-behavior: smooth;
   margin: 0 auto;
   text-align: center;
