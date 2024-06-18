@@ -9,17 +9,17 @@ import './style.css'
 const appDiv = document.querySelector("#app");
 const header = document.querySelector("header");
 
-createHeader(document.body, heaterLogo, menuItemsHeaderI, OnSearch, menuItemsHeaderII);
+createHeader(header, heaterLogo, menuItemsHeaderI, OnSearch, menuItemsHeaderII);
 
-const callApi = (keyword) => {
+export const callApi = (keyword) => {
   const accessKey = 'UdGLeHvGPYod1K-LPYP0HevqnNknec_b1g6Ov_5VbF4'
   const API_URL = `https://api.unsplash.com/search/photos?query=${keyword}&client_id=${accessKey}`
 
   fetch(API_URL)
     .then((res) => res.json())
-    .then((results) => {
-      console.log(results);
-      results.forEach(results => {
+    .then((res) => {
+      console.log(res);
+      res.results.forEach(results => {
         const card = createCard(appDiv, results.urls.full);
 
         /*   card.querySelector("img").addEventListener("click", () => {
@@ -32,7 +32,8 @@ const callApi = (keyword) => {
       alert("Error al obtener los datos de la API");
     })
 }
-callApi("gatito")
+
+callApi("gatos")
 
 createFooter(document.body, footerLogo, menuFooter, socialLinks);
 
