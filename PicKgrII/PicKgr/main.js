@@ -1,15 +1,19 @@
 import { OnSearch } from './actions/OnSearch';
-import { createCard } from './src/components/Card/card';
+import { createCard } from './src/components/Card/card'
 import { createFooter } from './src/components/Footer/footer';
 import { createHeader } from './src/components/Header/header';
 import { footerLogo, menuFooter, socialLinks } from './src/data/footer';
 import { heaterLogo, menuItemsHeaderI, menuItemsHeaderII } from './src/data/header';
 import './style.css'
 
-const appDiv = document.querySelector("#app");
+export const appDiv = document.querySelector("#app");
 const header = document.querySelector("header");
+const footer = document.querySelector("footer");
+const serchInput = document.querySelector(".search-input");
+
 
 createHeader(header, heaterLogo, menuItemsHeaderI, OnSearch, menuItemsHeaderII);
+createFooter(footer, footerLogo, menuFooter, socialLinks);
 
 export const callApi = (keyword) => {
   const accessKey = 'UdGLeHvGPYod1K-LPYP0HevqnNknec_b1g6Ov_5VbF4'
@@ -33,7 +37,21 @@ export const callApi = (keyword) => {
     })
 }
 
-callApi("gatos")
+callApi("gato");
 
-createFooter(document.body, footerLogo, menuFooter, socialLinks);
+serchInput.addEventListener('keypress', (event) => {
+  if (event.key === 'Enter') {
+    callApi(searchInput.value);
+  }
+});
+
+/* serahButton.addEventListener('click', () => {
+  OnSearch(searchInput.value);
+}); */
+
+
+
+
+
+
 
