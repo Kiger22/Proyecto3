@@ -3,7 +3,7 @@ import("./card.css");
 export const createCard = (node, imgSrc, title, description) => {
   const card = document.createElement("div");
   card.className = "card";
-  app.appendChild(card);
+  node.appendChild(card);
 
   const img = document.createElement("img");
   img.src = imgSrc;
