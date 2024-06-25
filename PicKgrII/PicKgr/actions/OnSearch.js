@@ -1,3 +1,7 @@
+export const OnSearch = () => {
+  alert(" Buscando");
+}
+
 /* import { appDiv } from "../main"
 import { createCard } from "../src/components/Card/card"
 
