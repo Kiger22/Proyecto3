@@ -1,5 +1,5 @@
 import { OnSearch } from './actions/OnSearch';
-import { createCard } from './src/components/Card/card'
+import { createCard } from './src/components/Card/card';
 import { createFooter } from './src/components/Footer/footer';
 import { createHeader } from './src/components/Header/header';
 import { footerLogo, menuFooter, socialLinks } from './src/data/footer';
@@ -11,9 +11,8 @@ const header = document.querySelector("header");
 const footer = document.querySelector("footer");
 const serchInput = document.querySelector(".search-input");
 
-
 createHeader(header, heaterLogo, menuItemsHeaderI, OnSearch, menuItemsHeaderII);
-createFooter(footer, footerLogo, menuFooter, socialLinks);
+
 
 export const callApi = (keyword) => {
   const accessKey = 'UdGLeHvGPYod1K-LPYP0HevqnNknec_b1g6Ov_5VbF4'
@@ -26,9 +25,9 @@ export const callApi = (keyword) => {
       res.results.forEach(results => {
         const card = createCard(appDiv, results.urls.full);
 
-        /*   card.querySelector("img").addEventListener("click", () => {
-            openModal(image.urls.full);
-          }); */
+        /* card.querySelector("img").addEventListener("click", () => {
+          openModal(image.urls.full);
+        }); */
 
       });
     })
@@ -39,15 +38,17 @@ export const callApi = (keyword) => {
 
 callApi("gato");
 
-serchInput.addEventListener('keypress', (event) => {
+/* serchInput.addEventListener('keypress', (event) => {
   if (event.key === 'Enter') {
     callApi(searchInput.value);
   }
-});
+}); */
 
 /* serahButton.addEventListener('click', () => {
   OnSearch(searchInput.value);
 }); */
+
+createFooter(footer, footerLogo, menuFooter, socialLinks);
 
 
 
