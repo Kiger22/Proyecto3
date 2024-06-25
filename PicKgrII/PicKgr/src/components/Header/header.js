@@ -34,7 +34,6 @@ export const createHeader = (node, logoSrc, menuItems, onSearch, menuItemsII) =>
   searchSection.className = "header-search"
 
   createSearchInput(searchSection, placeholder, buttonText, onSearch);
-
   header.appendChild(searchSection);
 
   // menuItemsII
