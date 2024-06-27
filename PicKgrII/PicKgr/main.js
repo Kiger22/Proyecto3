@@ -9,7 +9,8 @@ import './style.css'
 export const appDiv = document.querySelector("#app");
 const header = document.querySelector("header");
 const footer = document.querySelector("footer");
-const serchInput = document.querySelector(".search-input");
+//const serchInput = document.querySelector(".search-input");
+
 
 createHeader(header, heaterLogo, menuItemsHeaderI, OnSearch, menuItemsHeaderII);
 
@@ -36,7 +37,7 @@ export const callApi = (keyword) => {
     })
 }
 
-callApi("gato");
+/* callApi("Ciclismo"); */
 
 /* serchInput.addEventListener('keypress', (event) => {
   if (event.key === 'Enter') {
@@ -44,8 +45,8 @@ callApi("gato");
   }
 }); */
 
-/* serahButton.addEventListener('click', () => {
-  OnSearch(searchInput.value);
+/* searcButton.addEventListener('click', () => {
+  callApi(searchInput.value);
 }); */
 
 createFooter(footer, footerLogo, menuFooter, socialLinks);
