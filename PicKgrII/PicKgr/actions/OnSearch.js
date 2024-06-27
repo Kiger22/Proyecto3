@@ -1,5 +1,12 @@
 export const OnSearch = () => {
-  alert(" Buscando");
+  //alert(" Buscando");
+  const serchInput = document.querySelector(".search-input");
+  //const searcButton = document.querySelector(".search-button");
+
+  //searcButton.addEventListener('click', () => {
+  callApi(searchInput.value);
+  //});
+
 }
 
 /* import { appDiv } from "../main"
