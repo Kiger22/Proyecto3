@@ -1,6 +1,8 @@
+import { callApi } from "../main";
+
 export const OnSearch = () => {
   //alert(" Buscando");
-  const serchInput = document.querySelector(".search-input");
+  const searchInput = document.querySelector(".search-input");
   //const searcButton = document.querySelector(".search-button");
 
   //searcButton.addEventListener('click', () => {
