@@ -1,11 +1,11 @@
 import("./footer.css");
 
 
-export const createFooter = (node, logoSrc, menuItems, socialLinks) => {
+export const createFooter = (logoSrc, menuItems, socialLinks) => {
 
   const footer = document.createElement("footer");
   footer.className = "footer";
-  node.appendChild(footer);
+  document.body.appendChild(footer);
 
   // logoSrc
   const logoSection = document.createElement("div");
