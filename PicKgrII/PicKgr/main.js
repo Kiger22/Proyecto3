@@ -7,8 +7,6 @@ import { heaterLogo, menuItemsHeaderI, menuItemsHeaderII } from './src/data/head
 import './style.css'
 
 export const appDiv = document.querySelector("#app");
-//const serchInput = document.querySelector(".search-input");
-
 
 createHeader(heaterLogo, menuItemsHeaderI, OnSearch, menuItemsHeaderII);
 
@@ -37,17 +35,7 @@ export const callApi = (keyword) => {
     })
 }
 
-/* callApi("Ciclismo"); */
-
-/* serchInput.addEventListener('keypress', (event) => {
-  if (event.key === 'Enter') {
-    callApi(searchInput.value);
-  }
-}); */
-
-/* searcButton.addEventListener('click', () => {
-  callApi(searchInput.value);
-}); */
+callApi("gatitos");
 
 createFooter(footerLogo, menuFooter, socialLinks);
 
