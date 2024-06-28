@@ -9,6 +9,11 @@ export const createSearchInput = (node, placeholder, buttonText, onSearch) => {
   input.type = "text";
   input.className = "search-input";
   input.placeholder = placeholder;
+  input.addEventListener('keypress', (event) => {
+    if (event.key === 'Enter') {
+      onSearch();
+    }
+  });
   searchContainer.appendChild(input);
 
   const button = document.createElement("button");
