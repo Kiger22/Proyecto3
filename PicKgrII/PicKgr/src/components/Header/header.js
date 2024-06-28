@@ -5,10 +5,10 @@ import { createButton } from "../Button/button";
 import { createSearchInput } from "../Search/search";
 import "./header.css"
 
-export const createHeader = (node, logoSrc, menuItems, onSearch, menuItemsII) => {
+export const createHeader = (logoSrc, menuItems, onSearch, menuItemsII) => {
   const header = document.createElement("header");
   header.className = "header";
-  node.appendChild(header);
+  document.body.appendChild(header);
 
   // logoSrc
   const logoSection = document.createElement("div");
