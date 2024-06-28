@@ -7,13 +7,10 @@ import { heaterLogo, menuItemsHeaderI, menuItemsHeaderII } from './src/data/head
 import './style.css'
 
 export const appDiv = document.querySelector("#app");
-const header = document.querySelector("header");
-const footer = document.querySelector("footer");
 //const serchInput = document.querySelector(".search-input");
 
 
-createHeader(header, heaterLogo, menuItemsHeaderI, OnSearch, menuItemsHeaderII);
-
+createHeader(heaterLogo, menuItemsHeaderI, OnSearch, menuItemsHeaderII);
 
 export const callApi = (keyword) => {
   const accessKey = 'UdGLeHvGPYod1K-LPYP0HevqnNknec_b1g6Ov_5VbF4'
@@ -49,7 +46,7 @@ export const callApi = (keyword) => {
   callApi(searchInput.value);
 }); */
 
-createFooter(footer, footerLogo, menuFooter, socialLinks);
+createFooter(footerLogo, menuFooter, socialLinks);
 
 
 
